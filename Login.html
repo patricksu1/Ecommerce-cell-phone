@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .button{
+
+            font-size: 20px;
+            border: none;
+            border-radius: 10%;
+        }
+        .button:hover{
+
+            color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<h1>Login</h1>
+<form action = "Login.php" method="post">
+    <p>Email: <input type="text" name = "email" required> </p>
+    <p>Password: <input type="password" name="pwd" required> </p>
+    <br>
+    <input class="button" type="submit" value="login">
+</form>
+<br>
+<button class="button" onclick="reg()">Register</button>
+<br>
+<br>
+<button class="button" onclick="forget()">Forget Password</button>
+</body>
+<script>
+    function reg(){
+        location.replace("Register.html");
+    }
+    function forget() {
+       location.replace("forget.php")
+    }
+</script>
+</html>

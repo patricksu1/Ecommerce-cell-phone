@@ -1,0 +1,47 @@
+.header{
+    width: 100%;
+}
+.header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.header ul li{
+    float: left;
+}
+.header ul li a{
+    display: block;
+    //color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active{
+    background-color: aqua;
+}
+
+.itemlist li div img{
+    //float: left;
+}
+.itemlist li div div{
+    //clear: right;
+}
+.content{
+    text-align: center;
+}
+body{
+    background-color: mintcream;
+}
+form [type=submit]{
+     position: fixed;
+     font-size: 30px;
+     top: 10%;
+     right: 10%;
+     border: none;
+     border-radius: 10%;
+
+ }
+form [type=submit]:hover{
+    color: khaki;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heading to detail</title>
+    <style>
+        form{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id = "go" action="detail.php" method="post">
+        <input id = "idi" type="text" name = "itemid" value="">
+    </form>
+</body>
+<script>
+      var item = localStorage.getItem("detail");
+    localStorage.removeItem("detail");
+      document.getElementById("idi").value=item;
+      document.getElementById("go").submit();
+
+</script>
+</html>

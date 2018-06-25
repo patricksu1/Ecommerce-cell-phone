@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .button{
+
+            font-size: 20px;
+            border: none;
+            border-radius: 10%;
+        }
+        .button:hover{
+
+            color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<h1>Please fill out the following information</h1>
+<form action="Register.php" method="post" onsubmit="return val();">
+    <p>Email: <input id = "un" type="text" name="email" required></p>
+    <p>Password: <input id = "pwd" type="password" name="pwd" required></p>
+    <p>re-type Password: <input id ="repwd" type="password" name="repwd" required> </p>
+    <p>First Name: <input type="text" name="first"> </p>
+    <p>Last Name: <input type="text" name = "last"></p>
+    <input class="button" type="submit">
+    <p id="error"></p>
+
+</form>
+<script>
+    function val() {
+        var value =true;
+        var emailFormat =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+        var email = document.getElementById("un");
+        var error ="";
+        var password = document.getElementById("pwd");
+        var repwd =document.getElementById("repwd");
+        if (!email.value.match(emailFormat)){
+            error =error+"Email is not correct!";
+            value = false;
+        }
+        if (password.value!=repwd.value){
+            error=error+" Passwords do not match!";
+            value= false;
+        }
+        document.getElementById("error").innerHTML = error;
+        return value;
+    }
+</script>
+</body>
+</html>
